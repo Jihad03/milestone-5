@@ -28,31 +28,52 @@
           </p>
           <div class="button-div mb-5">
             <h2>Memory</h2>
-            <button class="btn btn-light border border-dark">
+            <button
+              class="btn btn-light border border-dark"
+              onclick="updateTotal('extra-memory-cost',0)"
+            >
               8GB unified memory
             </button>
-            <button class="btn btn-light border border-dark">
+            <button
+              class="btn btn-light border border-dark"
+              onclick="updateTotal('extra-memory-cost',180)"
+            >
               16GB unified memory
             </button>
           </div>
           <div class="button-div mb-5">
             <h2>Storage</h2>
-            <button class="btn btn-light border border-dark">
+            <button
+              class="btn btn-light border border-dark"
+              onclick="updateTotal('extra-storage-cost',0)"
+            >
               256GB SSD storage
             </button>
-            <button class="btn btn-light border border-dark">
+            <button
+              class="btn btn-light border border-dark"
+              onclick="updateTotal('extra-storage-cost',100)"
+            >
               512GB SSD storage
             </button>
-            <button class="btn btn-light border border-dark">
+            <button
+              class="btn btn-light border border-dark"
+              onclick="updateTotal('extra-storage-cost',180)"
+            >
               1TB SSD storage
             </button>
           </div>
           <div class="button-div">
             <h2>Choose your delivery option</h2>
-            <button class="btn btn-light border border-dark">
+            <button
+              class="btn btn-light border border-dark"
+              onclick="updateTotal('extra-delivery-cost',0)"
+            >
               Friday, Aug 25 FREE Prime Delivery
             </button>
-            <button class="btn btn-light border border-dark">
+            <button
+              class="btn btn-light border border-dark"
+              onclick="updateTotal('extra-delivery-cost',20)"
+            >
               Friday, Aug 21 Delivery charge $20
             </button>
           </div>
@@ -60,25 +81,25 @@
             <thead>
               <tr>
                 <th>Best Price</th>
-                <th>$1200</th>
+                <th>$1299</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th>Extra Memory Cost</th>
-                <th>$0</th>
+                <th>$<span id="extra-memory-cost">0</span></th>
               </tr>
               <tr>
                 <th>Extra Storage Cost</th>
-                <th>$0</th>
+                <th>$<span id="extra-storage-cost">0</span></th>
               </tr>
               <tr>
                 <th>Delivery Charge</th>
-                <th>$0</th>
+                <th>$<span id="extra-delivery-cost">0</span></th>
               </tr>
               <tr>
                 <th>Total Price</th>
-                <th>$1299</th>
+                <th>$<span id="total">1299</span></th>
               </tr>
             </tbody>
           </table>
@@ -92,7 +113,7 @@
           </div>
         </div>
       </main>
-      <h3 class="text-center">Total: $1299</h3>
+      <h3 class="text-center">Total: $<span id="sub-total">1299</span></h3>
     </header>
     <script src="./app.js"></script>
   </body>
